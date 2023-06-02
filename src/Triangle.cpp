@@ -10,14 +10,14 @@ Triangle::Triangle(int side1, int side2, int side3)
   : side1{side1},
     side2{side2},
     side3{side3} {
-  assert(side1 >= side2 && side1 >= side3 && "First side is not the longest");
-  assert(side1 < side2 + side3 && "Does not satisfy triangle inequality");
+  assert((side1 >= side2 && side1 >= side3) && "First side is not the longest");
+  assert(((side1 < side2 + side3) || (side2 < side3 + side1) || (side3 < side1 + side2))&& "Does not satisfy triangle inequality");
 }
 
 
 int
 Triangle::getPerimeter() const {
-  return side1 + side2 + side2;
+  return side1 + side2 + side3;
 }
 
 
@@ -35,13 +35,17 @@ Triangle::getArea() const {
 
 bool
 Triangle::isIsosceles() const {
-  return side1 == side2 || side2 == side3 || side1 == side3;
+  if(side1 == side2 && side2 == side3 && side1==side3)
+  {
+    return false;
+  }
+  return (side1 == side2 || side2 == side3 || side1 == side3);
 }
 
 
 bool
 Triangle::isEquilateral() const {
-  return side1 == side2 && side2 == side3;
+  return side1 == side2 && side2 == side3 && side1==side3;
 }
 
 

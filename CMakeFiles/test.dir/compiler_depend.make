@@ -433,8 +433,7 @@ CMakeFiles/test.dir/test/hailstonetest.cpp.o: test/hailstonetest.cpp \
   googletest-src/googletest/include/gtest/gtest-typed-test.h \
   googletest-src/googletest/include/gtest/gtest_pred_impl.h \
   googletest-src/googletest/include/gtest/gtest_prod.h \
-  lib/Hailstone.h \
-  lib/Triangle.h
+  lib/Hailstone.h
 
 CMakeFiles/test.dir/test/tester.cpp.o: test/tester.cpp \
   /usr/include/stdc-predef.h \

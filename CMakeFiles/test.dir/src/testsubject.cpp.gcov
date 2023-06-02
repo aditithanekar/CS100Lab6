@@ -1,0 +1,19 @@
+        -:    0:Source:/home/csmajs/athan014/lab-06---code-coverage-athan014-kchau047-3/src/testsubject.cpp
+        -:    0:Graph:testsubject.cpp.gcno
+        -:    0:Data:testsubject.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "../lib/testsubject.h"
+        -:    2:
+        6:    3:bool TestSubject::isEven(int x) {
+        6:    4:    return (x % 2 == 0);
+        -:    5:}
+        -:    6:
+        3:    7:int TestSubject::square(int x) {
+        3:    8:    if (isEven(x)) {
+        2:    9:        return x * x;
+        -:   10:    } else {
+        -:   11:        // Intentionally made wrong
+        1:   12:        return x + x;
+        -:   13:    }
+        -:   14:}

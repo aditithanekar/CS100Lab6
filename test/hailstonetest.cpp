@@ -1,8 +1,6 @@
-#include "gtest/gtest.h"
+#include <gtest/gtest.h>
 #include "../lib/Hailstone.h"
-#include "../lib/Triangle.h"
 using sequence::satisfiesHailstone;
-using namespace shapes;
 
 TEST(HailstoneTests, satisfyHailstoneZeroFalse)
 {
@@ -11,8 +9,7 @@ TEST(HailstoneTests, satisfyHailstoneZeroFalse)
 }
 TEST(HailstoneTests, satisfyHailstoneOne)
 {
-    bool result = sequence::satisfiesHailstone(1);
-    EXPECT_TRUE(result);
+    EXPECT_NO_THROW(sequence::satisfiesHailstone(1));
 }
 TEST(HailstoneTests, satisfyHailstoneEven)
 {

@@ -212,5 +212,4 @@ CMakeFiles/test.dir/test/hailstonetest.cpp.o: \
  /home/csmajs/athan014/lab-06---code-coverage-athan014-kchau047-3/googletest-src/googletest/include/gtest/gtest-typed-test.h \
  /home/csmajs/athan014/lab-06---code-coverage-athan014-kchau047-3/googletest-src/googletest/include/gtest/gtest_pred_impl.h \
  /home/csmajs/athan014/lab-06---code-coverage-athan014-kchau047-3/googletest-src/googletest/include/gtest/gtest_prod.h \
- /home/csmajs/athan014/lab-06---code-coverage-athan014-kchau047-3/test/../lib/Hailstone.h \
- /home/csmajs/athan014/lab-06---code-coverage-athan014-kchau047-3/test/../lib/Triangle.h
+ /home/csmajs/athan014/lab-06---code-coverage-athan014-kchau047-3/test/../lib/Hailstone.h
