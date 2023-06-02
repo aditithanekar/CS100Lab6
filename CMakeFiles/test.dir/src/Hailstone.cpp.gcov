@@ -1,0 +1,28 @@
+        -:    0:Source:/home/csmajs/athan014/lab-06---code-coverage-athan014-kchau047-3/src/Hailstone.cpp
+        -:    0:Graph:Hailstone.cpp.gcno
+        -:    0:Data:Hailstone.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:
+        -:    2:#include "../lib/Hailstone.h"
+        -:    3:
+        -:    4:
+        -:    5:using sequence::satisfiesHailstone;
+        -:    6:
+        -:    7:
+        -:    8:bool
+        4:    9:sequence::satisfiesHailstone(uint64_t number) {
+        4:   10:  if (0 == number) {
+        1:   11:    return false;
+        -:   12:  }
+        -:   13:
+        -:   14:  while (true) {
+       37:   15:    if (1 == number) {
+        3:   16:      return true;
+       34:   17:    } else if (0 == number%2) {
+       24:   18:      number = number / 2;
+        -:   19:    } else {
+       10:   20:      number = 3 * number + 1;
+        -:   21:    }
+        -:   22:  }
+        -:   23:}

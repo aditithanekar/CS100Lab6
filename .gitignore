@@ -7,4 +7,3 @@ googletest-src/
 lib/libgtest.a
 lib/libgtest_main.a
 CMakeCache.txt
-CMakeFiles/

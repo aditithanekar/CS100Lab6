@@ -1,0 +1,62 @@
+        -:    0:Source:/home/csmajs/athan014/lab-06---code-coverage-athan014-kchau047-3/src/Triangle.cpp
+        -:    0:Graph:Triangle.cpp.gcno
+        -:    0:Data:Triangle.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include <math.h>
+        -:    2:#include <assert.h>
+        -:    3:#include "../lib/Triangle.h"
+        -:    4:
+        -:    5:
+        -:    6:using shapes::Triangle;
+        -:    7:
+        -:    8:
+        7:    9:Triangle::Triangle(int side1, int side2, int side3)
+        -:   10:  : side1{side1},
+        -:   11:    side2{side2},
+        7:   12:    side3{side3} {
+       7*:   13:  assert(side1 >= side2 && side1 >= side3 && "First side is not the longest");
+       7*:   14:  assert(side1 < side2 + side3 && "Does not satisfy triangle inequality");
+        7:   15:}
+        -:   16:
+        -:   17:
+        -:   18:int
+        4:   19:Triangle::getPerimeter() const {
+        4:   20:  return side1 + side2 + side2;
+        -:   21:}
+        -:   22:
+        -:   23:
+        -:   24:double
+        2:   25:Triangle::getArea() const {
+        -:   26:  // Here we use Heron's formula to compute the area
+        2:   27:  double halfPerimeter = getPerimeter() / 2.0;
+        2:   28:  double radicand = halfPerimeter
+        2:   29:                    * (halfPerimeter - side1)
+        2:   30:                    * (halfPerimeter - side2)
+        2:   31:                    * (halfPerimeter - side3);
+        2:   32:  return sqrt(radicand);
+        -:   33:}
+        -:   34:
+        -:   35:
+        -:   36:bool
+        2:   37:Triangle::isIsosceles() const {
+       2*:   38:  return side1 == side2 || side2 == side3 || side1 == side3;
+        -:   39:}
+        -:   40:
+        -:   41:
+        -:   42:bool
+    #####:   43:Triangle::isEquilateral() const {
+    #####:   44:  return side1 == side2 && side2 == side3;
+        -:   45:}
+        -:   46:
+        -:   47:
+        -:   48:Triangle::Kind
+        2:   49:Triangle::getKind() const {
+        2:   50:  if (isIsosceles()) {
+        2:   51:    return Kind::ISOSCELES;
+    #####:   52:  } else if (isEquilateral()) {
+    #####:   53:    return Kind::EQUILATERAL;
+        -:   54:  } else {
+    #####:   55:    return Kind::SCALENE;
+        -:   56:  }
+        -:   57:}
